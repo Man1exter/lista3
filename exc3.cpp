@@ -33,6 +33,7 @@ int main()
 {
     int num;
     std::vector<Student> studentList;
+
     
     cout << "Ilu studentow dodac do listy? " << endl;
     cin >> num;
@@ -61,12 +62,12 @@ int main()
 
         cout << "Podaj grupe studenta: ";
         getline(cin, inputGroupID);
-
-
+ 
         Student thisStudent(inputName, inputStudentID, inputClassID, inputAgeID, inputGroupID);
         studentList.push_back(thisStudent);
 
         cout << endl;
+
     }
 
     cout << endl;; 
