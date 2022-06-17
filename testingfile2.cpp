@@ -1,4 +1,4 @@
-// utwórz w programie egzemplarze klas Student oraz Pracownik,a następnie (przypisz ich składnikom danych wartości pobrane z klawiatury)
+// utwórz w programie egzemplarze klas Student oraz Pracownik,a następnie (przypisz ich składnikom danych wartości pobrane z klawiatury) + tablica + sort
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
@@ -159,7 +159,7 @@ public:
 
 
 int main() {
-   
+
     Student studentTest;
     wprowadz_dane(studentTest);
 
