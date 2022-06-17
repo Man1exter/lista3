@@ -21,7 +21,7 @@ public:
 
     string getName() { return myName; }
     string getStudentID() { return myStudentID; }
-    void printInfo() { cout << myName << setw(15) << myStudentID << setw(10) << myClassID << endl; }
+    void printInfo() { cout << myName << setw(25) << myStudentID << setw(20) << myClassID << endl; }
 
 };
 
@@ -29,7 +29,7 @@ int main()
 {
     int num;
     std::vector<Student> studentList;
-    cout << "How many students do you wish to add to the student list ? " << endl;
+    cout << "Ilu studentow dodac do listy? " << endl;
     cin >> num;
 
 
@@ -38,18 +38,16 @@ int main()
     {
 
         string inputName, inputStudentID, inputClassID;
-        //get name
-        cout << "Please enter the Student name : ";
+
+        cout << "Podaj imie: ";
         getline(cin, inputName);
 
 
-        //get student ID
-        cout << "Please enter the Student ID number : ";
+        cout << "Podaj nazwisko: ";
         getline(cin, inputStudentID);
 
 
-        //get class ID
-        cout << "Please enter the Student class ID : ";
+        cout << "Podaj numer katalogu studenta: ";
         getline(cin, inputClassID);
 
 
@@ -60,34 +58,28 @@ int main()
         cout << endl;
     }
 
-    //sort(studentList.begin(), studentList.end());
-    /*
-    I never figured out how to sort the list by name.
-    I do not know how to compare the name of studentList[0] and studentList[1]
-    to put them in alphabetical order.
-    */
-    cout << endl;; // FORMATTING
+    cout << endl;; 
 
-    cout << "The student list has a size of " << studentList.size() << endl;
+    cout << "Rozmiar listy studentow to " << studentList.size() << endl;
 
-    cout << endl;; // FORMATTING
+    cout << endl;; 
 
 
-    cout << "Student Name" << setw(15) << "Student ID" << setw(10) << "Class ID" << endl;
+    cout << "IMIE STUDENTA" << setw(25) << "NAZWISKO STUDENTA" << setw(20) << "INDEX STUDENTA" << endl;
     for (int a = 0; a < studentList.size(); a++)
     {
         studentList[a].printInfo();
     }
 
-    cout << endl;; // FORMATTING
+    cout << endl;; 
 
 
     string searchedName;
     char answer;
     do
     {
-        cout << endl;; // FORMATTING
-        cout << "Please type the name of the person you want to search for: ";
+        cout << endl;; 
+        cout << "Podaj imie studenta wyszukiwanego na liscie: ";
         getline(cin, searchedName);
         for (int a = 0; a < studentList.size(); a++)
         {
@@ -97,14 +89,14 @@ int main()
                 break;
             }
             else
-                if (a == (studentList.size() - 1)) //If went to end of the list, tell them name not found.
-                    cout << "There is no " << searchedName << " in the list. \n";
+                if (a == (studentList.size() - 1)) 
+                    cout << "Nie ma studenta " << searchedName << " na liscie. \n";
 
 
         }
 
-        cout << "Would you like to search for another person? \n";
-        cout << "Y for Yes, N for No. \n";
+        cout << "Czy chcialbys poszukac innej osoby? \n";
+        cout << "Y dla tak, N dla nie. \n";
         cin >> answer;
         cin.ignore();
 
@@ -112,8 +104,5 @@ int main()
 
 
     return 0;
-
-
-
 
 }
